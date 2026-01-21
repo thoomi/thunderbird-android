@@ -32,7 +32,6 @@ abstract class BaseActivity(
     private val pushController: PushController by inject()
     protected val themeManager: ThemeManager by inject()
     private val appLanguageManager: AppLanguageManager by inject()
-
     private var overrideLocaleOnLaunch: Locale? = null
 
     override fun attachBaseContext(baseContext: Context) {
@@ -48,7 +47,6 @@ abstract class BaseActivity(
     override fun onCreate(savedInstanceState: Bundle?) {
         initializeTheme()
         initializePushController()
-
         enableEdgeToEdge()
 
         WindowCompat.getInsetsController(window, window.decorView).apply {
